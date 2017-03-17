@@ -24,6 +24,9 @@ int main() {
 	
 	cin>>s; //input source
 	
+	clock_t t1,t2;
+    t1=clock();
+    
 	for(int i=1;i<=n;i++){
 		d[i]=10000;
 	}
@@ -45,7 +48,13 @@ int main() {
 	}
 	
 	for(int i=1;i<=n;i++){
-		cout<<d[i]<<" "<<endl;
+		cout<<d[i]<<" ";
 	}
+	cout<<endl;
+	
+	t2=clock();
+    float diff ((float)t2-(float)t1);
+    cout<<diff<<endl;
+	
 	return 0;
 }
