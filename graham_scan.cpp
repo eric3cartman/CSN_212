@@ -82,6 +82,7 @@ void graham_scan(vector<pair<int, int> > &P)    {
 
 int main()
 {
+	//NUMBER OF INPUTS MUST BE GREATER THAN 3
 	vector<pair<int, int> > Points;
 	Points.pb(mp(3,3));
 	Points.pb(mp(3,-3));
