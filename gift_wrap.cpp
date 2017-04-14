@@ -43,10 +43,10 @@ void gift_wrap(vector<pair<int, int> > &P){
 int main() {
 	//NUMBER OF INPUTS MUST BE GREATER THAN 3
 	vector<pair<int, int> > Points;
-	Points.pb(mp(3,3));
-	Points.pb(mp(3,-3));
-	Points.pb(mp(-3,3));
-	Points.pb(mp(-3,-3));
+	Points.pb(mp(4,4));
+	Points.pb(mp(4,-4));
+	Points.pb(mp(-4,4));
+	Points.pb(mp(-4,-4));
 	Points.pb(mp(0,0));
 	Points.pb(mp(-2,-2));
 	Points.pb(mp(-1,-1));
