@@ -5,7 +5,7 @@ using namespace std;
 #define X first
 #define Y second
 
-bool next(pair<int, int> p, pair<int, int> q, pair<int, int> r){
+bool orientation(pair<int, int> p, pair<int, int> q, pair<int, int> r){
 	int a=(q.Y - p.Y) * (r.X - q.X) - (q.X - p.X) * (r.Y - q.Y); //condition for collinearity of 3 points
 	if(a>=0) return false;
 	else return true;
@@ -27,7 +27,7 @@ void gift_wrap(vector<pair<int, int> > &P){
 		q=(p+1)%n;
 		//----Find next point of hull
 		for(int i=0;i<n;i++){
-			if(next(P[p], P[i], P[q])) q=i;
+			if(orientation(P[p], P[i], P[q])) q=i;
 		}
 		p=q;
 	} while(p!=left);
