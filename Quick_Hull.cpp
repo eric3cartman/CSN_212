@@ -6,7 +6,7 @@ using namespace std;
 #define y second
 
 vector<pair<int, int> > hull;
-
+//check left or right
 int location(pair<int, int> p, pair<int, int> q, pair<int, int> r)
 {
     int val = (q.y - p.y) * (r.x - q.x) -
@@ -15,7 +15,7 @@ int location(pair<int, int> p, pair<int, int> q, pair<int, int> r)
     if (val == 0) return 0; 
     return (val > 0)? 1: 2; 
 }
-
+//distance of point from line AB
 int dist(pair<int, int> a, pair<int, int> b, pair<int, int> c){
 	int dx = b.x - a.x;
     int dy = b.y - a.y;
@@ -37,7 +37,7 @@ void findhull(pair<int, int> a, pair<int, int> b, vector<pair<int, int> > &P){
 	}
 	//cout<<P[f].x<<P[f].y;
 	pair<int, int> A=P[f];
-	hull.pb(P[f]);
+	hull.pb(P[f]);//include farthest point in hull
 	P.erase(remove(P.begin(), P.end(), A), P.end());
 	vector<pair<int, int> > right1;
 	vector<pair<int, int> > right2;
