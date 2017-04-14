@@ -6,7 +6,7 @@ using namespace std;
 #define Y second
 
 bool next(pair<int, int> p, pair<int, int> q, pair<int, int> r){
-	int a=(q.Y - p.Y) * (r.X - q.X) - (q.X - p.X) * (r.Y - q.Y); 
+	int a=(q.Y - p.Y) * (r.X - q.X) - (q.X - p.X) * (r.Y - q.Y); //condition for collinearity of 3 points
 	if(a>=0) return false;
 	else return true;
 }
